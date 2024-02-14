@@ -1,13 +1,147 @@
 @font-face {
-  font-display: swap; 
+  font-display: swap;
   font-family: 'Play';
   font-weight: 400;
-  src: url('../fonts/play-v19-latin-regular.woff2') format('woff2'); 
+  src: url('../fonts/play-v19-latin-regular.woff2') format('woff2');
 }
 
 @font-face {
-  font-display: swap; 
+  font-display: swap;
   font-family: 'Play';
   font-weight: 700;
-  src: url('../fonts/play-v19-latin-700.woff2') format('woff2'); 
+  src: url('../fonts/play-v19-latin-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  font-weight: 400;
+  src: url('../fonts/roboto-v30-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  font-weight: 700;
+  src: url('../fonts/roboto-v30-latin-700.woff2') format('woff2');
+}
+
+:root {
+  --color-brand-normal: #2b7fff;
+  --color-brand-dark: #011c44;
+  --color-brand-light: #ffffff;
+  --color-primary-light: #747272;
+  --color-primary-dark: #000000;
+  --color-secondary-dark: #4a4a4a;
+}
+
+body {
+  color: var(--color-brand-dark);
+  /* background-color: var(--color-brand-light); */
+  background-color: antiquewhite;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+ul {
+  list-style-type: none;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Button */
+.button {
+  color: var(--color-brand-light);
+  background-color: var(--color-brand-normal);
+  border: 2px solid var(--color-brand-normal);
+  font-weight: 600;
+  border-radius: 32px;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: var(--color-brand-dark);
+  background-color: transparent;
+  border: 2px solid var(--color-brand-normal);
+}
+
+/* Link */
+.header-link {
+  color: var(--color-brand-dark);
+  text-decoration: none;
+}
+
+.header-link:hover {
+  color: var(--color-brand-normal);
+}
+
+.footer-link{
+  color: var(--color-brand-light);
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: var(--color-brand-normal);
+}
+
+/* Hero section */
+.hero-title .accent {
+  color: var(--color-brand-normal);
+}
+
+.hero-comment {
+  color: var(--color-secondary-dark);
+}
+
+.section-title .accent {
+  color: var(--color-brand-normal);
+}
+
+.description-text {
+  font-size: 22px;
+}
+
+.description-text .accent {
+  font-weight: 600;
+}
+
+/* Advantages section */
+.advantages-text {
+  color: var(--color-primary-dark);
+}
+
+/* Procedures section */
+.procedure-title{
+  color: var(--color-brand-light);
+  font-size: 22px;
+}
+
+/* Location section */
+.location-comment{
+  color: var(--color-brand-light);
+}
+
+.location-comment .accent {
+  color: var(--color-brand-normal);
+}
+
+/* Footer section */
+.address-link {
+  color: var(--color-brand-light);
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.address-link:hover {
+  color: var(--color-brand-normal);
+}
+
+.address-copyright {
+  color: var(--color-primary-light);
+  font-size: 13px;
 }
