@@ -37,8 +37,7 @@
 
 body {
   color: var(--color-brand-dark);
-  /* background-color: var(--color-brand-light); */
-  background-color: antiquewhite;
+  background-color: var(--color-brand-light);
   font-family: 'Roboto', sans-serif;
   font-size: 22px;
   font-weight: 400;
@@ -102,12 +101,12 @@ address {
 }
 
 /* Hero section */
-.hero-title{
+.hero-title {
   font-size: 18px;
   font-weight: 400;
 }
 
-.hero-title .accent{
+.hero-title .accent {
   font-family: 'Play', sans-serif;
   font-size: 140px;
   font-weight: 700;
@@ -123,14 +122,14 @@ address {
   line-height: 1.7;
 }
 
-.description-text span{
+.description-text span {
   font-weight: 600;
 }
 
 /* Advantages section */
 .advantages-text {
   color: var(--color-primary-dark);
-    font-size: 18px;
+  font-size: 18px;
   line-height: 1.3;
 }
 
@@ -139,13 +138,22 @@ address {
   color: var(--color-brand-light);
 }
 
+
 /* Location section */
 .location-comment {
   color: var(--color-brand-light);
   font-weight: 600;
 }
 
+.location-container {
+  background-color: var(--color-brand-dark);
+}
+
 /* Footer section */
+.footer {
+  background-color: var(--color-brand-dark);
+}
+
 .address-link {
   color: var(--color-brand-light);
   font-size: 16px;
