@@ -40,7 +40,7 @@ body {
   /* background-color: var(--color-brand-light); */
   background-color: antiquewhite;
   font-family: 'Roboto', sans-serif;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 400;
   line-height: 1.2;
 }
@@ -53,12 +53,23 @@ address {
   font-style: normal;
 }
 
+.accent {
+  color: var(--color-brand-normal);
+}
+
+.section-title {
+  font-family: 'Play', sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+}
+
 /* Button */
 .button {
   color: var(--color-brand-light);
   background-color: var(--color-brand-normal);
   border: 2px solid var(--color-brand-normal);
   font-weight: 600;
+  font-size: 18px;
   border-radius: 32px;
   cursor: pointer;
 }
@@ -72,6 +83,7 @@ address {
 /* Link */
 .header-link {
   color: var(--color-brand-dark);
+  font-size: 18px;
   text-decoration: none;
 }
 
@@ -79,7 +91,7 @@ address {
   color: var(--color-brand-normal);
 }
 
-.footer-link{
+.footer-link {
   color: var(--color-brand-light);
   font-size: 16px;
   text-decoration: none;
@@ -90,44 +102,47 @@ address {
 }
 
 /* Hero section */
-.hero-title .accent {
-  color: var(--color-brand-normal);
+.hero-title{
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.hero-title .accent{
+  font-family: 'Play', sans-serif;
+  font-size: 140px;
+  font-weight: 700;
 }
 
 .hero-comment {
   color: var(--color-secondary-dark);
-}
-
-.section-title .accent {
-  color: var(--color-brand-normal);
+  font-size: 12px;
+  line-height: 1.5;
 }
 
 .description-text {
-  font-size: 22px;
+  line-height: 1.7;
 }
 
-.description-text .accent {
+.description-text span{
   font-weight: 600;
 }
 
 /* Advantages section */
 .advantages-text {
   color: var(--color-primary-dark);
+    font-size: 18px;
+  line-height: 1.3;
 }
 
 /* Procedures section */
-.procedure-title{
+.procedure-title {
   color: var(--color-brand-light);
-  font-size: 22px;
 }
 
 /* Location section */
-.location-comment{
+.location-comment {
   color: var(--color-brand-light);
-}
-
-.location-comment .accent {
-  color: var(--color-brand-normal);
+  font-weight: 600;
 }
 
 /* Footer section */
