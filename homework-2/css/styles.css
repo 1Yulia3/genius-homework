@@ -74,13 +74,6 @@ address {
   color: var(--color-brand-normal);
 }
 
-.section-title {
-  font-family: 'Play', sans-serif;
-  font-size: 64px;
-  font-weight: 700;
-  margin-bottom: 48px;
-}
-
 .section {
   padding: 48px 0;
 }
@@ -95,6 +88,7 @@ address {
 .test {
   background-color: #4a4a4a;
 }
+
 /* Button */
 .button {
   color: var(--color-brand-light);
@@ -156,6 +150,14 @@ address {
   justify-content: center;
 }
 
+.header-icon {
+  fill: var(--color-brand-dark);
+}
+
+.header-icon:hover {
+  fill: var(--color-brand-normal);
+}
+
 /* Hero section */
 .hero-section {
   padding-top: 122px;
@@ -176,8 +178,10 @@ address {
 
 .hero-comment {
   color: var(--color-secondary-dark);
+  max-width: 238px;
   font-size: 12px;
   line-height: 1.5;
+  text-align: center;
 }
 
 /* Description section */
@@ -197,6 +201,9 @@ address {
 .description-title {
   margin-bottom: 40px;
   max-width: 530px;
+  font-family: 'Play', sans-serif;
+  font-size: 64px;
+  font-weight: 700;
 }
 
 .description-container {
@@ -219,19 +226,26 @@ address {
 }
 
 /* Advantages section */
+.advantages-title {
+  font-family: 'Play', sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  margin: 0 auto 48px;
+  max-width: 432px;
+  text-align: center;
+}
+
 .advantages-list {
   display: flex;
   gap: 56px;
 }
 
-.advantages-item{
-  flex-basis: calc((100% - 112px) / 3);
-}
-
 .advantages-card {
-  padding: 0 32px;
-  border: 1px solid var(--color-brand-dark);
+  padding: 24px 32px;
+  border: 1px solid var(--color-primary-light);
   border-radius: 32px;
+  box-shadow: 0px 4px 4px 0px #a8c6f561;
+  text-align: center;
 }
 
 .advantages-text {
@@ -243,6 +257,14 @@ address {
 
 /* Procedures section */
 .procedures-title {
+  font-family: 'Play', sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.procedure-title {
   margin-bottom: 0;
   /* color: var(--color-brand-light); */
   color: #011c44;
@@ -258,13 +280,52 @@ address {
 }
 
 .procedures-card {
-  padding-left: 115px;
-  padding-right: 77px;
-  border: 1px solid var(--color-brand-dark);
+  width: 344px;
+  height: 456px;
+  background: linear-gradient(
+    180.05deg,
+    rgba(1, 28, 68, 0) 48.53%,
+    rgba(1, 28, 68, 0.725825) 84.61%,
+    #011c44 101.39%
+  );
   border-radius: 4px 120px 4px 120px;
 }
 
+.carousel-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid var(--color-brand-dark);
+}
+
+.carousel-button:hover {
+  background: var(--color-brand-normal);
+  border: 1px solid var(--color-brand-normal);
+}
+
+.arrow-icon {
+  fill: var(--color-brand-dark);
+}
+
+.carousel-button:hover .arrow-icon {
+  fill: var(--color-brand-light);
+}
+
 /* Location section */
+.location-title {
+  font-family: 'Play', sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
 .location-comment {
   color: var(--color-brand-light);
   font-weight: 600;
@@ -287,6 +348,14 @@ address {
 
 .address-link:hover {
   color: var(--color-brand-normal);
+}
+
+.footer-icon {
+  fill: var(--color-brand-light);
+}
+
+.footer-icon:hover {
+  fill: var(--color-brand-normal);
 }
 
 .address-copyright {
