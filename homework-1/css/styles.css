@@ -101,12 +101,12 @@ address {
 }
 
 /* Hero section */
-.hero-title {
+.hero-text {
   font-size: 18px;
   font-weight: 400;
 }
 
-.hero-title .accent {
+.hero-title {
   font-family: 'Play', sans-serif;
   font-size: 140px;
   font-weight: 700;
@@ -137,7 +137,6 @@ address {
 .procedure-title {
   color: var(--color-brand-light);
 }
-
 
 /* Location section */
 .location-comment {
