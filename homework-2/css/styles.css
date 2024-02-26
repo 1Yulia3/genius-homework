@@ -238,11 +238,11 @@ address {
 }
 
 .description-content {
-  flex-basis: 50%;
+  flex-basis: 60%;
 }
 
 .description-photo {
-  flex-basis: 50%;
+  flex-basis: 40%;
 }
 
 .photo-face {
