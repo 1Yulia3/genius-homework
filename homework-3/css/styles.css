@@ -33,6 +33,7 @@
   --color-primary-light: #747272;
   --color-primary-dark: #000000;
   --color-secondary-dark: #4a4a4a;
+  --color-header: #ffffff40;
 }
 
 /* Base */
@@ -103,6 +104,7 @@ address {
   font-size: 18px;
   border-radius: 32px;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .button:hover {
@@ -116,6 +118,7 @@ address {
   color: var(--color-brand-dark);
   font-size: 18px;
   text-decoration: none;
+  transition: color 0.3s;
 }
 
 .header-link:hover {
@@ -126,13 +129,35 @@ address {
   color: var(--color-brand-light);
   font-size: 16px;
   text-decoration: none;
+  transition: color 0.3s;
 }
 
 .footer-link:hover {
   color: var(--color-brand-normal);
 }
 
+.address-link {
+  color: var(--color-brand-light);
+  font-size: 16px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.address-link:hover {
+  color: var(--color-brand-normal);
+}
+
 /* Header */
+.header {
+  background: var(--color-header);
+  backdrop-filter: blur(5px);
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 32px 0;
+}
+
 .header-container {
   display: flex;
   align-items: center;
@@ -161,6 +186,7 @@ address {
 
 .header-icon {
   fill: var(--color-brand-dark);
+  transition: fill 0.3s;
 }
 
 .header-icon:hover {
@@ -168,6 +194,13 @@ address {
 }
 
 /* Hero section */
+.hero-position {
+  padding-top: 16px;
+  position: relative;
+  top: 20px;
+  left: 106px;
+}
+
 .hero-section {
   max-width: 1440px;
   margin: 0 auto;
@@ -237,14 +270,30 @@ address {
 
 .description-content {
   flex-basis: 60%;
+  padding-top: 40px;
 }
 
 .description-photo {
+  position: relative;
+  height: 695px;
   flex-basis: 40%;
 }
 
-.photo-face {
+.photo-face-left,
+.photo-face-right {
   border-radius: 100%;
+}
+
+.photo-face-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.photo-face-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 /* Advantages section */
@@ -304,7 +353,6 @@ address {
   align-items: center;
   gap: 32px;
 }
-
 .procadures-list {
   display: flex;
   gap: 16px;
@@ -324,6 +372,11 @@ address {
     #011c44 101.39%
   );
   border-radius: 4px 120px 4px 120px;
+  transition: transform 0.3s;
+}
+
+.procedures-card:hover {
+  transform: scale(1.05);
 }
 
 .carousel-button {
@@ -337,6 +390,7 @@ address {
   cursor: pointer;
   border-radius: 50%;
   border: 1px solid var(--color-brand-dark);
+  transition: 0.3s;
 }
 
 .carousel-button:hover {
@@ -350,6 +404,10 @@ address {
 
 .carousel-button:hover .arrow-icon {
   fill: var(--color-brand-light);
+}
+
+.carousel-button.next {
+  transform: rotate(180deg);
 }
 
 /* Location section */
@@ -389,16 +447,33 @@ address {
   height: 482px;
   padding: 48px 57px;
   border-radius: 32px;
+  text-align: center;
+}
+
+.form-field-location {
+  margin-bottom: 16px;
 }
 
 /* Footer section */
 .footer {
+  position: relative;
   padding: 56px 0;
   background-color: var(--color-brand-dark);
   background-image: url(../images/footer-background.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+}
+
+.footer::after {
+  position: absolute;
+  width: 248px;
+  height: 152px;
+  bottom: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-image: url('../images/pipette.png');
+  content: '';
 }
 
 .footer-container {
@@ -423,18 +498,9 @@ address {
   flex-grow: 1;
 }
 
-.address-link {
-  color: var(--color-brand-light);
-  font-size: 16px;
-  text-decoration: none;
-}
-
-.address-link:hover {
-  color: var(--color-brand-normal);
-}
-
 .footer-icon {
   fill: var(--color-brand-light);
+  transition: fill 0.3s;
 }
 
 .footer-icon:hover {
@@ -445,4 +511,124 @@ address {
   color: var(--color-primary-light);
   margin-bottom: 0;
   font-size: 13px;
+}
+
+/* Modal  */
+.backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.backdrop.is-hidden {
+  display: none;
+}
+
+.modal {
+  position: relative;
+  width: 100%;
+  max-width: 724px;
+  height: 100%;
+  max-height: 680px;
+  padding: 42px 144px;
+  background-color: var(--color-brand-dark);
+  background-image: url('../images/location-background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 48px;
+  overflow-y: auto;
+}
+
+.modal-btn-close {
+  position: absolute;
+  top: 42px;
+  right: 42px;
+}
+
+.modal-title {
+  color: var(--color-brand-light);
+  font-family: 'Play', sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.modal-text {
+  margin-bottom: 32px;
+  color: var(--color-brand-light);
+  font-weight: 600;
+}
+
+/* Form */
+.form-container {
+  width: 100%;
+  max-width: 310px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.form-field {
+  margin-bottom: 24px;
+}
+
+.form-label {
+  display: block;
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.form-input {
+  padding: 18px 32px;
+  width: 100%;
+  max-width: 310px;
+  font-size: 13px;
+  line-height: 1.17;
+  border: 2px solid var(--color-primary-light);
+  border-radius: 32px;
+  background-color: transparent;
+}
+
+.form-input:focus {
+  background-color: var(--color-primary-light);
+  outline: none;
+}
+
+.form-input::placeholder {
+  color: var(--color-brand-light);
+  font-size: 13px;
+  line-height: 1.17;
+}
+
+.form-button {
+  margin-bottom: 8px;
+}
+
+.form-button:hover {
+  color: var(--color-brand-light);
+}
+
+.form-terms {
+  color: var(--color-primary-light);
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
+.form-terms-link {
+  color: var(--color-primary-light);
+  text-underline-offset: 2px;
 }
