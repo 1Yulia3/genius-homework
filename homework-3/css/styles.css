@@ -104,7 +104,7 @@ address {
   font-size: 18px;
   border-radius: 32px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 .button:hover {
@@ -118,7 +118,7 @@ address {
   color: var(--color-brand-dark);
   font-size: 18px;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: color 0.2s;
 }
 
 .header-link:hover {
@@ -129,7 +129,7 @@ address {
   color: var(--color-brand-light);
   font-size: 16px;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: color 0.2s;
 }
 
 .footer-link:hover {
@@ -140,7 +140,7 @@ address {
   color: var(--color-brand-light);
   font-size: 16px;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: color 0.2s;
 }
 
 .address-link:hover {
@@ -186,7 +186,7 @@ address {
 
 .header-icon {
   fill: var(--color-brand-dark);
-  transition: fill 0.3s;
+  transition: fill 0.2s;
 }
 
 .header-icon:hover {
@@ -296,7 +296,69 @@ address {
   right: 0;
 }
 
+.star1 {
+  fill: var(--color-brand-dark);
+  position: absolute;
+  top: 340px;
+  right: 294px;
+  animation: spin 1s infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+
+  50% {
+    transform: rotate(20deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.star2 {
+  fill: var(--color-brand-normal);
+  position: absolute;
+  right: -20px;
+  top: 32px;
+  animation: morphingBar 1s infinite;
+}
+
+@keyframes morphingBar {
+  0%,
+  100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.5);
+  }
+}
+
+.star3 {
+  fill: var(--color-primary-light);
+  position: absolute;
+  right: 6px;
+  top: 268px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /* Advantages section */
+.wave::before {
+  content: '';
+  background-image: url(../images/blue-background.png);
+}
+
 .advantages-title {
   font-family: 'Play', sans-serif;
   font-size: 64px;
@@ -319,6 +381,11 @@ address {
   max-width: 316px;
   box-shadow: 0px 4px 4px 0px #a8c6f561;
   text-align: center;
+  transition: transform 0.2s;
+}
+
+.advantages-item:hover {
+  transform: scale(1.05);
 }
 
 .advantages-text {
@@ -372,7 +439,7 @@ address {
     #011c44 101.39%
   );
   border-radius: 4px 120px 4px 120px;
-  transition: transform 0.3s;
+  transition: transform 0.2s;
 }
 
 .procedures-card:hover {
@@ -390,7 +457,7 @@ address {
   cursor: pointer;
   border-radius: 50%;
   border: 1px solid var(--color-brand-dark);
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 .carousel-button:hover {
@@ -500,7 +567,7 @@ address {
 
 .footer-icon {
   fill: var(--color-brand-light);
-  transition: fill 0.3s;
+  transition: fill 0.2s;
 }
 
 .footer-icon:hover {
